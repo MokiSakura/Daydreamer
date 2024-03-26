@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結束バンド</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 0);
+        }
+        .shell{
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            overflow: hidden;
+        }
+        .page{
+            transform: translateX(-110%);
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            transition: .5s;
+            background-size: cover;
+        }
+        .button{
+            display: block;
+            width: 10%;
+            color: #fff;
+            font-size: 30px;
+            border-bottom: #fff solid 4px;
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            margin: 50px;
+            left: calc(50% + (var(--i)*17%));
+            z-index: 999;
+            transition: .3s;
+        }
+        .page_content{
+            box-sizing: border-box;
+            height: 100%;
+            padding: 50px;
+            color: #FFF;
+            position: absolute;
+            left: 100%;
+            display: none;
+            animation-name: fade;
+            animation-duration: .7s;
+            animation-iteration-count: 1;
+            opacity: 1;
+        }
+        @keyframes fade{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        input{
+            display: none;
+        }
+        input:checked+.page{
+            transform: translateX(0px);
+            transition: .4s;
+        }
+        input:checked+.page .page_content{
+            width: 100%;
+            display: block;
+        }
+        .page:nth-child(3){
+            background-image: url('./band.jpg');
+        }
+        .page:nth-child(3) .page_content{
+            background-color: rgb(255, 149, 96);
+        }
+
+        .page:nth-child(6){
+            background-image: url('./1000.jpg');
+        }
+        .page:nth-child(6) .page_content{
+            background-color: rgb(173,170,226);
+        }
+
+        .page:nth-child(9){
+            background-image: url('./39.jpg');
+	        }
+        .page:nth-child(9) .page_content{
+            background-color: rgb(225, 171, 105);
+        }
+        .page h1{
+            font-size: 70px;
+        }
+        .page p{
+            font-size: 30px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, .3);
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        .page span{
+            font-size: 26px;
+            letter-spacing: 2px;
+            color: rgb(56, 56, 56);
+        }
+        label:hover{
+            cursor: pointer;
+            border-bottom: solid 4px rgb(35, 35, 35);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <label for="button1" class="button" style="--i:0">乐队文化</label>
+        <input type="radio" id="button1" name="page" checked>
+        <div class="page">
+            <div class="page_content">
+                <h1>乐队文化</h1>
+                <p>The Culture of Bands.</p>
+                <span><h4>
+                &nbsp  &nbsp结束乐队是由伊地知虹夏创立的女高中生乐队，现有4人。
+           <br>
+                &nbsp&nbsp 与学校社团不同，结束乐队并不受到社团经费的影响。但是，结束乐队得承担在Livehouse演出的定额，这可比获取社团经费更加困难。
+           <br>
+                &nbsp&nbsp 乐队名字中的“結束（けっそく）”意为“团结”。此外，結束バンド也有“束线带”之意，这就与“结束乐队”形成了一对双关语。在动画第9话中，伊地知星歌曾因乐队其余三人都没有在暑假邀请后藤一里出去玩，而认为她们失去了团结力（結束），吐槽她们换个乐队名算了。                                
+                </h4></span>
+            </div>
+        </div>
+
+
+        <label for="button2" class="button" style="--i:1">乐队驻地</label>
+        <input type="radio" id="button2" name="page">
+        <div class="page">
+            <div class="page_content">
+                <h1>乐队驻地</h1>
+                <p>The Band Residence.</p>
+                <span><h5>
+                &nbsp&nbsp&nbsp&nbsp结束乐队的常驻活动地点是位于下北泽的繁星展演厅（live house STARRY），该展演厅的店长是担任乐队队长兼鼓手的伊地知虹夏的姐姐伊地知星歌.<br>
+				&nbsp&nbsp<li>吉他手后藤一里，故事一开始其所持的吉他为老爸祖传的Gibson Les Paul Custom Reissue，秀华高中文化祭后换成了自费的Yamaha品牌的吉他（据网友考究可能是Yamaha PAC 611V）。
+				&nbsp&nbsp<li>鼓手伊地知虹夏，所用的架子鼓为Pearl CS1450。
+				&nbsp&nbsp<li>贝斯手山田凉，所持贝斯为Fender Player Precision Bass PF, Polar White。
+				&nbsp&nbsp<li>主唱兼吉他手喜多郁代，所持吉他为Gibson Les Paul Special Double Cut Junior。		           </h5></span>
+            </div>
+        </div>
+
+
+        <label for="button3" class="button" style="--i:2">演出记录</label>
+        <input type="radio" id="button3" name="page">
+        <div class="page">
+            <div class="page_content">
+                <h1>演出记录</h1>
+                <p>The Record of Performance.</p>
+                <span><h4>
+                    <li>于动画第1话进行首次演出。</li>
+                    <li>于动画第5话参与了演出前的现场审查，演唱《吉他与孤独与蓝色星球》，结果是通过。</li>
+                    <li>于动画第8话举办首次正式演出。演唱了《吉他与孤独与蓝色星球》和《那个乐队》。</li>
+                    <li>于动画第12话参加了秀华高中的文化祭。演唱了《绝不会忘记》和《若能化作星座》。在演奏第二首歌曲时后藤一里的吉他出现了问题，靠着喜多的即兴solo和用广井喝剩的空酒罐进行滑棒成功救场。      </li>             
+                </h4></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
